@@ -1,28 +1,7 @@
 /* eslint-disable no-console */
-import getSpecial from './getspecial';
+import Validator from './validator';
 
-const character = {
-  name: 'Лучник',
-  type: 'Bowman',
-  health: 50,
-  level: 3,
-  attack: 40,
-  defence: 10,
-  special: [
-    {
-      id: 8,
-      name: 'Двойной выстрел',
-      icon: 'http://...',
-      description: 'Двойной выстрел наносит двойной урон',
-    },
-    {
-      id: 9,
-      name: 'Нокаутирующий удар',
-      icon: 'http://...',
-      // <- обратите внимание, описание "засекречено"
-    },
-  ],
-};
+const name = 'name';
+const validator = new Validator(name);
 
-
-console.log(getSpecial(character));
+console.log(validator.validateUsername());
